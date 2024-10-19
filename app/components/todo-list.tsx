@@ -17,6 +17,19 @@ export default function TodoList() {
   const inputRef = useRef<HTMLInputElement>(null);
   const todoRefs = useRef<(HTMLLIElement | null)[]>([]);
 
+  // セッションストレージからデータを読み込む
+  useEffect(() => {
+    const storedTodos = JSON.parse(sessionStorage.getItem("todos") ?? "[]");
+    if (storedTodos.length) {
+      setTodos(storedTodos);
+    }
+  }, []);
+
+  // todosの変更をセッションストレージに保存する
+  useEffect(() => {
+    sessionStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
+
   const addTodo = () => {
     if (newTodo.trim() !== "") {
       setTodos([...todos, { id: Date.now(), text: newTodo, completed: false }]);
