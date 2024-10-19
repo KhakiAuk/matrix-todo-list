@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Matrix Neumorphic Todo アプリケーション ユーザーガイド
 
-## Getting Started
+## 基本操作
 
-First, run the development server:
+### タスクの追加
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. 画面上部の入力フィールドにタスクを入力します。
+2. Enter キーを押すか、右側の「+」ボタンをクリックしてタスクを追加します。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### タスクの完了/未完了の切り替え
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- タスクの左側にあるチェックボックスをクリックします。
+- または、タスクを選択した状態で Enter キーを押します。
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### タスクの削除
 
-## Learn More
+- タスクの右側にある赤いゴミ箱アイコンをクリックします。
+- または、タスクを選択した状態で Backspace キーまたは Delete キーを押します。
 
-To learn more about Next.js, take a look at the following resources:
+## キーボードナビゲーション
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### タスク間の移動
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- 上下の矢印キーを使用して、タスク間を移動します。
+- 最初のタスクで上矢印キーを押すと、入力フィールドにフォーカスが移動します。
 
-## Deploy on Vercel
+### タスクの選択
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- タスクにフォーカスが当たっている状態で、そのタスクが選択されます。
+- 選択されたタスクは緑色の枠で強調表示されます。
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### ショートカットキー
+
+- Enter: 新しいタスクの追加（入力フィールドにフォーカスがある場合）または選択されたタスクの完了/未完了の切り替え
+- Backspace/Delete: 選択されたタスクの削除
+
+## その他の機能
+
+### アニメーション効果
+
+- 背景には「マトリックス」風の落下する文字アニメーションが表示されます。
+- タスクにホバーすると、軽い拡大効果があります。
+
+### レスポンシブデザイン
+
+- このアプリケーションは様々な画面サイズに対応しています。モバイルデバイスでも快適に使用できます。
+
+## 注意事項
+
+- このアプリケーションはローカルストレージを使用していないため、ページをリロードするとタスクは消去されます。
+- 重要なタスクは別の場所にバックアップすることをおすすめします。
+
+以上が基本的な操作方法です。直感的なデザインなので、使いながら覚えていくこともできるでしょう。楽しくタスク管理をしてください！
