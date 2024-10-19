@@ -143,7 +143,7 @@ export default function TodoList() {
               }`}
               onClick={() => setSelectedTodoId(todo.id)}
             >
-              <div className="mr-2 relative flex-shrink-0">
+              <div className="flex mr-2 relative flex-shrink-0">
                 <input
                   type="checkbox"
                   checked={todo.completed}
